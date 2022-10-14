@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [ConfigModule.forRoot({
-    envFilePath: ['.env'],
+    envFilePath: process.env.TEST,
     isGlobal: true
   })],
   controllers: [AppController],
